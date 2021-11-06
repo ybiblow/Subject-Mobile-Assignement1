@@ -2,10 +2,335 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/spacebackgroud"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewHeart0"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/imageViewHeart1"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/imageViewHeart2"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            app:srcCompat="@drawable/heart" />
+    </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:columnCount="3"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutArrows"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rowCount="4">
+
+        <ImageView
+            android:id="@+id/imageViewStone0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="0"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="1"
+            android:visibility="invisible"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="2"
+            android:visibility="invisible"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="3"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="4"
+            android:visibility="invisible"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="5"
+            android:visibility="invisible"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="6"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="2"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="7"
+            android:visibility="invisible"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="2"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="8"
+            android:visibility="invisible"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_row="2"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="9"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="3"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="10"
+            android:visibility="invisible"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="3"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewStone11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="11"
+            android:visibility="invisible"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_row="3"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/stone" />
+
+        <ImageView
+            android:id="@+id/imageViewSpaceship0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="0"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="3"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/spaceship" />
+
+        <ImageView
+            android:id="@+id/imageViewSpaceship1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="1"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="3"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/spaceship" />
+
+        <ImageView
+            android:id="@+id/imageViewSpaceship2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="2"
+            android:visibility="invisible"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_row="3"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/spaceship" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutArrows"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewArrowLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="moveCar"
+            android:tag="0"
+            app:srcCompat="@drawable/arrowleft" />
+
+        <ImageView
+            android:id="@+id/imageViewArrowRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="moveCar"
+            android:tag="1"
+            app:srcCompat="@drawable/arrowright" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_row="0"
     tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/imageViewHeart0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/imageViewHeart1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewHeart0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/imageViewHeart2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewHeart1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/imageViewArrowRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="moveCar"
+        android:tag="1"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/arrowgreen2" />
+
+    <ImageView
+        android:id="@+id/imageViewArrowLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="moveCar"
+        android:tag="0"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/arrowgreen1" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
@@ -17,176 +342,224 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rowCount="6">
+        app:rowCount="5">
 
         <ImageView
             android:id="@+id/imageViewRock0"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="0"
+            app:layout_columnWeight="1"
             app:layout_row="0"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="1"
+            app:layout_columnWeight="1"
             app:layout_row="0"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="2"
+            app:layout_columnWeight="1"
             app:layout_row="0"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="0"
+            app:layout_columnWeight="1"
             app:layout_row="1"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="1"
+            app:layout_columnWeight="1"
             app:layout_row="1"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="2"
+            app:layout_columnWeight="1"
             app:layout_row="1"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="0"
+            app:layout_columnWeight="1"
             app:layout_row="2"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="1"
+            app:layout_columnWeight="1"
             app:layout_row="2"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="2"
+            app:layout_columnWeight="1"
             app:layout_row="2"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="0"
+            app:layout_columnWeight="1"
             app:layout_row="3"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock10"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="1"
+            app:layout_columnWeight="1"
             app:layout_row="3"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock11"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="2"
+            app:layout_columnWeight="1"
             app:layout_row="3"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock12"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="0"
+            app:layout_columnWeight="1"
             app:layout_row="4"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock13"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="1"
+            app:layout_columnWeight="1"
             app:layout_row="4"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
             android:id="@+id/imageViewRock14"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            android:visibility="invisible"
             app:layout_column="2"
+            app:layout_columnWeight="1"
             app:layout_row="4"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/rock1" />
 
         <ImageView
-            android:id="@+id/imageViewRock15"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
+            android:id="@+id/imageViewCar0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="0"
+            android:translationZ="2dp"
+            android:visibility="invisible"
             app:layout_column="0"
-            app:layout_row="5"
-            app:srcCompat="@drawable/rock1" />
+            app:layout_columnWeight="1"
+            app:layout_row="4"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/car1" />
 
         <ImageView
-            android:id="@+id/imageViewRock16"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="30dp"
+            android:id="@+id/imageViewCar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="1"
+            android:translationZ="2dp"
             app:layout_column="1"
-            app:layout_row="5"
-            app:srcCompat="@drawable/rock1" />
+            app:layout_columnWeight="1"
+            app:layout_row="4"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/car1" />
 
         <ImageView
-            android:id="@+id/imageViewRock17"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="40dp"
+            android:id="@+id/imageViewCar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="2"
+            android:translationZ="2dp"
+            android:visibility="invisible"
             app:layout_column="2"
-            app:layout_row="5"
-            app:srcCompat="@drawable/rock1" />
-        <ImageView
-            android:id="@+id/imageViewCar"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="30dp"
-            app:layout_column="1"
-            app:layout_row="5"
+            app:layout_columnWeight="1"
+            app:layout_row="4"
+            app:layout_rowWeight="1"
             app:srcCompat="@drawable/car1" />
     </androidx.gridlayout.widget.GridLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>-->
