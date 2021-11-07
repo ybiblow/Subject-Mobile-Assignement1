@@ -13,12 +13,12 @@ import java.util.Random;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
     private ArrayList<ImageView> stones;
     private ArrayList<ImageView> imageViewSpaceships;
     private ArrayList<ImageView> imageViewHearts;
     private Random random = new Random();
     int randomNumber;
+    int numOfHearts;
 
 
     @Override
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             imageViewHearts.add(findViewById(getResources().getIdentifier("imageViewHeart" + i, "id", getPackageName())));
         }
+        numOfHearts = 3;
         Handler handler = new Handler();
         Runnable runnable = new Runnable() {
             @Override
@@ -84,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int getVisibleSpaceshipTag() {
-        int tag;
         for (ImageView spaceship : imageViewSpaceships) {
             if (spaceship.getVisibility() == View.VISIBLE)
                 return Integer.parseInt(spaceship.getTag().toString());
@@ -102,7 +102,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void reduceHeart() {
-
+        if (numOfHearts != 0) {
+            for (ImageView heart : imageViewHearts) {
+                if (heart.getVisibility() == View.VISIBLE) {
+                    heart.setVisibility(View.INVISIBLE);
+                    numOfHearts--;
+                    break;
+                }
+            }
+        } else {
+            for (ImageView heart : imageViewHearts) {
+                heart.setVisibility(View.VISIBLE);
+                numOfHearts = 3;
+            }
+        }
     }
 
 }
