@@ -17,6 +17,8 @@ import java.util.Random;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Vibrator v;
     private ArrayList<ImageView> stones;
     private ArrayList<ImageView> imageViewSpaceships;
     private ArrayList<ImageView> imageViewHearts;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         stones = new ArrayList<ImageView>();
         for (int i = 0; i < 12; i++) {
             stones.add(findViewById(getResources().getIdentifier("imageViewStone" + i, "id", getPackageName())));
@@ -124,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void vibrate() {
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         // Vibrate for 500 milliseconds
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             v.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
