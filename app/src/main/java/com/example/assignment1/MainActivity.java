@@ -1,4 +1,4 @@
-package com.example.assignement1;
+package com.example.assignment1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.assignement1.R;
 
 import java.util.Random;
 import java.util.ArrayList;
